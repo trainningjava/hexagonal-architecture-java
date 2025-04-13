@@ -7,7 +7,6 @@ import eu.happycoders.shop.model.product.ProductId;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.TypedQuery;
-
 import java.util.List;
 import java.util.Optional;
 

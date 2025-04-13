@@ -1,19 +1,5 @@
 package eu.happycoders.shop.application.service.cart;
 
-import eu.happycoders.shop.application.port.in.cart.ProductNotFoundException;
-import eu.happycoders.shop.application.port.out.persistence.CartRepository;
-import eu.happycoders.shop.application.port.out.persistence.ProductRepository;
-import eu.happycoders.shop.model.cart.Cart;
-import eu.happycoders.shop.model.cart.NotEnoughItemsInStockException;
-import eu.happycoders.shop.model.customer.CustomerId;
-import eu.happycoders.shop.model.product.Product;
-import eu.happycoders.shop.model.product.ProductId;
-import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
-
 import static eu.happycoders.shop.model.money.TestMoneyFactory.euros;
 import static eu.happycoders.shop.model.product.TestProductFactory.createTestProduct;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,6 +10,19 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+
+import eu.happycoders.shop.application.port.in.cart.ProductNotFoundException;
+import eu.happycoders.shop.application.port.out.persistence.CartRepository;
+import eu.happycoders.shop.application.port.out.persistence.ProductRepository;
+import eu.happycoders.shop.model.cart.Cart;
+import eu.happycoders.shop.model.cart.NotEnoughItemsInStockException;
+import eu.happycoders.shop.model.customer.CustomerId;
+import eu.happycoders.shop.model.product.Product;
+import eu.happycoders.shop.model.product.ProductId;
+import java.util.Optional;
+import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class AddToCartServiceTest {
 

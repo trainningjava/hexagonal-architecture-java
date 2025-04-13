@@ -1,5 +1,7 @@
 package eu.happycoders.shop.adapter.in.rest.product;
 
+import static eu.happycoders.shop.adapter.in.rest.common.ControllerCommons.clientErrorException;
+
 import eu.happycoders.shop.application.port.in.product.FindProductsUseCase;
 import eu.happycoders.shop.model.product.Product;
 import jakarta.ws.rs.GET;
@@ -8,10 +10,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-
 import java.util.List;
-
-import static eu.happycoders.shop.adapter.in.rest.common.ControllerCommons.clientErrorException;
 
 @Path("/products")
 @Produces(MediaType.APPLICATION_JSON)

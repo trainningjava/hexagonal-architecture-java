@@ -1,19 +1,5 @@
 package eu.happycoders.shop.adapter.in.rest.product;
 
-import eu.happycoders.shop.application.port.in.product.FindProductsUseCase;
-import eu.happycoders.shop.model.product.Product;
-import io.restassured.response.Response;
-import jakarta.ws.rs.core.Application;
-import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.util.List;
-import java.util.Set;
-
 import static eu.happycoders.shop.adapter.in.rest.HttpTestCommons.TEST_PORT;
 import static eu.happycoders.shop.adapter.in.rest.HttpTestCommons.assertThatResponseIsError;
 import static eu.happycoders.shop.adapter.in.rest.product.ProductsControllerAssertions.assertThatResponseIsProductList;
@@ -23,6 +9,19 @@ import static io.restassured.RestAssured.given;
 import static jakarta.ws.rs.core.Response.Status.BAD_REQUEST;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
+import eu.happycoders.shop.application.port.in.product.FindProductsUseCase;
+import eu.happycoders.shop.model.product.Product;
+import io.restassured.response.Response;
+import jakarta.ws.rs.core.Application;
+import java.util.List;
+import java.util.Set;
+import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 class ProductsControllerTest {
 

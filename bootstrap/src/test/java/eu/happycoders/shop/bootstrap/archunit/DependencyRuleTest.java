@@ -1,10 +1,10 @@
 package eu.happycoders.shop.bootstrap.archunit;
 
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
+
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import org.junit.jupiter.api.Test;
-
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 class DependencyRuleTest {
 
@@ -36,7 +36,7 @@ class DependencyRuleTest {
 
   private void checkNoDependencyFromTo(
       String fromPackage, String toPackage, JavaClasses classesToCheck) {
-        noClasses()
+    noClasses()
         .that()
         .resideInAPackage(fullyQualified(fromPackage))
         .should()

@@ -21,7 +21,6 @@ import eu.happycoders.shop.application.service.cart.GetCartService;
 import eu.happycoders.shop.application.service.product.FindProductsService;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.ws.rs.core.Application;
-
 import java.util.Set;
 
 public class RestEasyUndertowShopApplication extends Application {

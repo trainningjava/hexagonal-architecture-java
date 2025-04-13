@@ -1,9 +1,9 @@
 package eu.happycoders.shop.adapter.in.rest.common;
 
+import static eu.happycoders.shop.adapter.in.rest.common.ControllerCommons.clientErrorException;
+
 import eu.happycoders.shop.model.customer.CustomerId;
 import jakarta.ws.rs.core.Response;
-
-import static eu.happycoders.shop.adapter.in.rest.common.ControllerCommons.clientErrorException;
 
 public final class CustomerIdParser {
 

@@ -1,19 +1,18 @@
 package eu.happycoders.shop.application.service.cart;
 
+import static eu.happycoders.shop.model.money.TestMoneyFactory.euros;
+import static eu.happycoders.shop.model.product.TestProductFactory.createTestProduct;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+
 import eu.happycoders.shop.application.port.out.persistence.CartRepository;
 import eu.happycoders.shop.model.cart.Cart;
 import eu.happycoders.shop.model.cart.NotEnoughItemsInStockException;
 import eu.happycoders.shop.model.customer.CustomerId;
 import eu.happycoders.shop.model.product.Product;
+import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-
-import java.util.Optional;
-
-import static eu.happycoders.shop.model.money.TestMoneyFactory.euros;
-import static eu.happycoders.shop.model.product.TestProductFactory.createTestProduct;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
 
 class GetCartServiceTest {
 

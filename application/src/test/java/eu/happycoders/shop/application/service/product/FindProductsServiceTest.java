@@ -1,18 +1,17 @@
 package eu.happycoders.shop.application.service.product;
 
-import eu.happycoders.shop.application.port.out.persistence.ProductRepository;
-import eu.happycoders.shop.model.product.Product;
-import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
-import org.junit.jupiter.api.Test;
-
-import java.util.List;
-
 import static eu.happycoders.shop.model.money.TestMoneyFactory.euros;
 import static eu.happycoders.shop.model.product.TestProductFactory.createTestProduct;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
+import eu.happycoders.shop.application.port.out.persistence.ProductRepository;
+import eu.happycoders.shop.model.product.Product;
+import java.util.List;
+import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
+import org.junit.jupiter.api.Test;
 
 class FindProductsServiceTest {
 

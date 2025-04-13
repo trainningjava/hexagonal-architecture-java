@@ -3,7 +3,6 @@ package eu.happycoders.shop.application.service.cart;
 import eu.happycoders.shop.application.port.in.cart.EmptyCartUseCase;
 import eu.happycoders.shop.application.port.out.persistence.CartRepository;
 import eu.happycoders.shop.model.customer.CustomerId;
-
 import java.util.Objects;
 
 public class EmptyCartService implements EmptyCartUseCase {

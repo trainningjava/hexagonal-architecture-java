@@ -1,5 +1,7 @@
 package eu.happycoders.shop.adapter.in.rest.cart;
 
+import static eu.happycoders.shop.adapter.in.rest.common.CustomerIdParser.parseCustomerId;
+
 import eu.happycoders.shop.application.port.in.cart.GetCartUseCase;
 import eu.happycoders.shop.model.cart.Cart;
 import eu.happycoders.shop.model.customer.CustomerId;
@@ -8,8 +10,6 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-
-import static eu.happycoders.shop.adapter.in.rest.common.CustomerIdParser.parseCustomerId;
 
 @Path("/carts")
 @Produces(MediaType.APPLICATION_JSON)

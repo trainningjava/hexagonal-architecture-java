@@ -5,7 +5,6 @@ import eu.happycoders.shop.model.cart.Cart;
 import eu.happycoders.shop.model.customer.CustomerId;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-
 import java.util.Optional;
 
 public class JpaCartRepository implements CartRepository {

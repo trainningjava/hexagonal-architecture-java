@@ -1,5 +1,9 @@
 package eu.happycoders.shop.adapter.in.rest.cart;
 
+import static eu.happycoders.shop.adapter.in.rest.common.ControllerCommons.clientErrorException;
+import static eu.happycoders.shop.adapter.in.rest.common.CustomerIdParser.parseCustomerId;
+import static eu.happycoders.shop.adapter.in.rest.common.ProductIdParser.parseProductId;
+
 import eu.happycoders.shop.application.port.in.cart.AddToCartUseCase;
 import eu.happycoders.shop.application.port.in.cart.ProductNotFoundException;
 import eu.happycoders.shop.model.cart.Cart;
@@ -13,10 +17,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-
-import static eu.happycoders.shop.adapter.in.rest.common.ControllerCommons.clientErrorException;
-import static eu.happycoders.shop.adapter.in.rest.common.CustomerIdParser.parseCustomerId;
-import static eu.happycoders.shop.adapter.in.rest.common.ProductIdParser.parseProductId;
 
 @Path("/carts")
 @Produces(MediaType.APPLICATION_JSON)

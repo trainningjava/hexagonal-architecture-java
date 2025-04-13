@@ -1,25 +1,5 @@
 package eu.happycoders.shop.adapter.in.rest.cart;
 
-import eu.happycoders.shop.application.port.in.cart.AddToCartUseCase;
-import eu.happycoders.shop.application.port.in.cart.EmptyCartUseCase;
-import eu.happycoders.shop.application.port.in.cart.GetCartUseCase;
-import eu.happycoders.shop.application.port.in.cart.ProductNotFoundException;
-import eu.happycoders.shop.model.cart.Cart;
-import eu.happycoders.shop.model.cart.NotEnoughItemsInStockException;
-import eu.happycoders.shop.model.customer.CustomerId;
-import eu.happycoders.shop.model.product.Product;
-import eu.happycoders.shop.model.product.ProductId;
-import io.restassured.response.Response;
-import jakarta.ws.rs.core.Application;
-import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.util.Set;
-
 import static eu.happycoders.shop.adapter.in.rest.HttpTestCommons.TEST_PORT;
 import static eu.happycoders.shop.adapter.in.rest.HttpTestCommons.assertThatResponseIsError;
 import static eu.happycoders.shop.adapter.in.rest.cart.CartsControllerAssertions.assertThatResponseIsCart;
@@ -31,6 +11,25 @@ import static jakarta.ws.rs.core.Response.Status.NO_CONTENT;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+
+import eu.happycoders.shop.application.port.in.cart.AddToCartUseCase;
+import eu.happycoders.shop.application.port.in.cart.EmptyCartUseCase;
+import eu.happycoders.shop.application.port.in.cart.GetCartUseCase;
+import eu.happycoders.shop.application.port.in.cart.ProductNotFoundException;
+import eu.happycoders.shop.model.cart.Cart;
+import eu.happycoders.shop.model.cart.NotEnoughItemsInStockException;
+import eu.happycoders.shop.model.customer.CustomerId;
+import eu.happycoders.shop.model.product.Product;
+import eu.happycoders.shop.model.product.ProductId;
+import io.restassured.response.Response;
+import jakarta.ws.rs.core.Application;
+import java.util.Set;
+import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 class CartsControllerTest {
 

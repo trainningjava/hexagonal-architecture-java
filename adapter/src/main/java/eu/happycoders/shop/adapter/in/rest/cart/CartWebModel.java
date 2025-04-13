@@ -2,7 +2,6 @@ package eu.happycoders.shop.adapter.in.rest.cart;
 
 import eu.happycoders.shop.model.cart.Cart;
 import eu.happycoders.shop.model.money.Money;
-
 import java.util.List;
 
 public record CartWebModel(

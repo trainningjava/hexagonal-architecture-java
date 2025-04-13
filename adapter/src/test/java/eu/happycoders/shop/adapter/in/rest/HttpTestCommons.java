@@ -1,9 +1,9 @@
 package eu.happycoders.shop.adapter.in.rest;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public final class HttpTestCommons {
 

@@ -9,7 +9,6 @@ import eu.happycoders.shop.model.cart.NotEnoughItemsInStockException;
 import eu.happycoders.shop.model.customer.CustomerId;
 import eu.happycoders.shop.model.product.Product;
 import eu.happycoders.shop.model.product.ProductId;
-
 import java.util.Objects;
 
 public class AddToCartService implements AddToCartUseCase {

@@ -4,7 +4,6 @@ import eu.happycoders.shop.application.port.in.cart.GetCartUseCase;
 import eu.happycoders.shop.application.port.out.persistence.CartRepository;
 import eu.happycoders.shop.model.cart.Cart;
 import eu.happycoders.shop.model.customer.CustomerId;
-
 import java.util.Objects;
 
 public class GetCartService implements GetCartUseCase {
